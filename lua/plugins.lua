@@ -8,13 +8,17 @@ end
 vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
+  -- Packer itself
   use 'wbthomason/packer.nvim'
+
+  -- Theme
   use {
     'svrana/neosolarized.nvim',
     requires = { 'tjdevries/colorbuddy.nvim' }
   }
   use 'hoob3rt/lualine.nvim'
 
+  -- LSP & Autocomplete
   use 'neovim/nvim-lspconfig'
   use 'L3MON4D3/LuaSnip'
   use 'onsails/lspkind-nvim'
@@ -35,5 +39,16 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
 
+  -- Auto closing tags
+  use 'windwp/nvim-ts-autotag'
+
+  -- Tabline
   use 'nanozuki/tabby.nvim'
+
+  -- Autocomment
+  use { 'numToStr/Comment.nvim',
+    requires = {
+      'JoosepAlviste/nvim-ts-context-commentstring'
+    }
+  }
 end)

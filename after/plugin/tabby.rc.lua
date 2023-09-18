@@ -3,11 +3,11 @@ local status, tabby = pcall(require, 'tabby.tabline')
 if (not status) then return end
 
 -- Colors
-local primary_color = '#079a9a'
+local primary_color = '#00abab'
 local accent_color = '#3b3537'
 
 -- Background colors
-local main_bg = '#262626'
+local main_bg = '#15141b'
 local active_bg = accent_color
 local inactive_bg = main_bg
 

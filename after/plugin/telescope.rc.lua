@@ -11,6 +11,7 @@ local fb_actions = require "telescope".extensions.file_browser.actions
 
 telescope.setup {
   defaults = {
+    file_ignore_patterns = { "node_modules", ".git" },
     mappings = {
       n = {
         ["q"] = actions.close

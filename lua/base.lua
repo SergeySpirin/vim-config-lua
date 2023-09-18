@@ -13,6 +13,7 @@ vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.hlsearch = true
 vim.opt.backup = false
+vim.opt.swapfile = false -- Disable swap file
 vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
@@ -32,7 +33,7 @@ vim.opt.si = true -- Smart indent
 -- Set shift width & tabstop for php files
 vim.api.nvim_create_autocmd('Filetype', {
   pattern = "php",
-  command = "setlocal shiftwidth=8 tabstop=8"
+  command = "setlocal shiftwidth=4 tabstop=4"
 })
 
 vim.opt.wrap = false
